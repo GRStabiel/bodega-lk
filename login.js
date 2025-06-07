@@ -1,30 +1,16 @@
+(() => {
+  'use strict'
 
+  const forms = document.querySelectorAll('.needs-validation')
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('loginForm');
-  const emailInput = document.getElementById('email');
-  const passwordInput = document.getElementById('password');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
 
-  form.addEventListener('submit', function (event) {
-    let isValid = true;
-
-    if (!emailInput.validity.valid) {
-      emailInput.classList.add('is-invalid');
-      isValid = false;
-    } else {
-      emailInput.classList.remove('is-invalid');
-    }
-
-    if (!passwordInput.value.trim()) {
-      passwordInput.classList.add('is-invalid');
-      isValid = false;
-    } else {
-      passwordInput.classList.remove('is-invalid');
-    }
-
-    if (!isValid) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-  });
-});
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()  
