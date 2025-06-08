@@ -105,14 +105,15 @@
         </div>
     
 <!--MODAL-->
+<!--id="exampleModal" é o endereço do modal, para que o botão saiba qual modal deve ser aberto-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button><!--botão de fechar modal-->
             </div>
             <div class="modal-body text-center">
-                <img id="modal-image" src="" alt="Imagem" class="img-fluid">
+                <img id="modal-image" src="" alt="Imagem" class="img-fluid"><!--imagem que será exibida no modal-->
             </div>
         </div>
     </div>
@@ -136,7 +137,9 @@
                 <td>1</td>
                 <td>Ypioca</td>
                 <td>Destilados</td>
-                <td> 
+                <td> <!--tag imagem foi adicionada dentro da tab button para que ao clicada, abre o modal-->
+                    <!--data-bs-toggle="modal" diz que vai abrir um modal quando for clicado-->
+                    <!--data-bs-target="#exampleModal" diz qual é o endereço do modal a ser aberto-->
                     <button 
                     type="button" 
                     class="btn btn-link" 

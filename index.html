@@ -16,20 +16,22 @@
       <div class="card card-body mt-5">
       <h2>Login</h2>
       <hr/>
-
-      <form class="needs-validation" action="dashboard.html" novalidate>
+        <!--type="email" define os requisitos para validação, nesse caso é "algumacoisa@algumacoisa"-->
+      <form class="needs-validation" action="dashboard.html" novalidate><!--classe "needs-validation" é necessária para poder trabalhar com o formulário no javascript-->
         <div class="mb-3">
           <input 
             placeholder="Email" 
-            type="email" 
+            type="email"  
             class="form-control form-control-lg" 
             id="email" 
             required>
+            <!--required diz que esse campo precisa ser preenchido, senão é inválido-->
+            <!--class="invalid-feedback" faz com que essa mensagem apareça caso o javascript retorne que o envio foi inválido-->
             <div class="invalid-feedback">
               Por favor informe um e-mail válido.
             </div>
         </div>
-
+        <!--type="text" define os requisitos para validação, nesse caso é "qualquer "-->
         <div class="mb-3">
           <input 
             placeholder="Senha" 
@@ -37,6 +39,8 @@
             class="form-control form-control-lg" 
             id="password" 
             required>
+            <!--required diz que esse campo precisa ser preenchido, senão é inválido-->
+            <!--class="invalid-feedback" faz com que essa mensagem apareça caso o javascript retorne que o envio foi inválido-->
             <div class="invalid-feedback">
               Insira a senha.
             </div>
